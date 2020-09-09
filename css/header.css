@@ -1,0 +1,142 @@
+header {
+  position: fixed;
+  padding: 0 15px;
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  width: 100vw;
+  height: auto;
+  min-height: 8vh;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+@keyframes fixHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.fixed {
+  transition: 1s ease background-color;
+  position: fixed;
+  /* border-color: #eee; */
+  animation: fixHeader 1s ease;
+  z-index: 3;
+  color: #db3437;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+header .row {
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.2s ease background-color;
+}
+
+.brand-name a {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fixed .brand-name a {
+  color: #db3437;
+  font-size: 1.6rem;
+}
+
+.hamburger .fa {
+  font-size: 1rem;
+  background-color: rgb(236, 235, 235);
+  color: #db3437;
+  display: none;
+  height: 35px;
+  width: 40px;
+  border-radius: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+/* .hamburger .fa::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: hamburger_puls 1s ease infinite;
+} */
+
+.navbar ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 35px;
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 72px;
+  color: white;
+  font-weight: 600;
+  position: relative;
+}
+
+.fixed .navbar ul li a {
+  color: #db3437;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.navbar ul li a::before {
+  content: "";
+  height: 2px;
+  color: #db3437;
+  /* background-color: rgb(236, 235, 235); */
+  width: 0%;
+  position: absolute;
+  right: 0px;
+  bottom: -27px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.fixed .navbar ul li a::before {
+  /* background-color: #888787; */
+  text-decoration: none;
+}
+
+.navbar ul li a:hover::before {
+  width: 100%;
+  left: 0;
+  text-decoration: none;
+}
+
+.navbar ul li a.active::before {
+  width: 100%;
+  left: 0;
+  text-decoration: none;
+}
